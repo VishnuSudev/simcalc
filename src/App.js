@@ -35,14 +35,14 @@ function App(){
     setCalc(eval(calc).toString());
   }
   const del = ()=>{
-    if(calc ==''){
+    if(calc ===''){
             return;
     }
     const value=calc.slice(0,-1);
     setCalc(value);
   }
   const alcr=()=>{
-    if (calc==''){
+    if (calc===''){
         return;
     }
     setCalc("");
