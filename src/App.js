@@ -9,13 +9,14 @@ function App(){
 
     const updateCalc=value=>{
       if(
-        ops.includes(value) && calc === ''||
-        ops.includes(value )&& ops.includes(calc.slice(-1))
+        (ops.includes(value) && calc === '') ||
+        (ops.includes(value )&& ops.includes(calc.slice(-1)))
       ){
         return;
       }
         setCalc(calc+value);
         if(!ops.includes(value)){
+            // eslint-disable-next-line
           setResult(eval(calc+value).toString());
         }
     }
@@ -30,6 +31,7 @@ function App(){
       return digits;
     }
   const calculate=()=>{
+      // eslint-disable-next-line
     setCalc(eval(calc).toString());
   }
   const del = ()=>{
